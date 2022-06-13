@@ -1,2 +1,2 @@
-# MVC-JS
-A Client-Side MVC framework in JavaScript
+# AppJS
+A Client-Side SPA framework in JavaScript
