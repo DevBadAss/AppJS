@@ -1,3 +1,7 @@
+import Request from "./mvc-request/request.js";
+import Loop from "./lib/Loop.js";
+
+
 /**
  * @class Router A mini SPA router module for hash urls.
  * @author Olawoore Emmanuel Collins
@@ -50,6 +54,18 @@ class Router {
     get(path) {
         window.location.hash = path;
     }
+
+    config(app, configFile) {
+        const config_request = new Request({ url: configFile, method: "GET", res: "json", type: "application/json", data: null });
+        config_request.pull(result => {
+            const route_loop = new Loop(result.route);
+            route_loop.run(i => {
+                console.log(result);
+                this.addRoute(result.route_name[i], result.route[i]);
+            });
+        });
+    }
+
 }
 
 export default Router;
