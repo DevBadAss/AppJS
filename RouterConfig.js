@@ -8,6 +8,7 @@ function RouterConfig(app, configFile) {
     config_request.pull(result => {
         const route_loop = new Loop(result.route);
         route_loop.run(i => {
+            console.log(result);
             router.addRoute(result.route_name[i], result.route[i]);
         });
     });
