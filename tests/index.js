@@ -39,3 +39,6 @@ router.addRoute("models", "#/home");
 
 // Importing DOM.js
 import DOM from "../lib/dom.js";
+
+const bodyDom = new DOM("app");
+console.log(bodyDom.select("parent-div"));
