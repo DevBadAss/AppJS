@@ -1,8 +1,8 @@
-import MVC from "../MVC.js";
+import App from "../App.js";
 import Router from "../Router.js";
 
 
-const app = new MVC("app");
+const app = new App("app");
 const router = new Router(app);
 
 app.addView({
