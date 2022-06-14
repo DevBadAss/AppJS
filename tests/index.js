@@ -41,4 +41,4 @@ router.addRoute("models", "#/home");
 import DOM from "../lib/dom.js";
 
 const bodyDom = new DOM("app");
-console.log(bodyDom.select("parent-div"));
+console.log(bodyDom.selectall("first-text"));
