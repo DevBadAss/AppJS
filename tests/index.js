@@ -1,9 +1,12 @@
+//Import the SPA and Router modules.
 import App from "../App.js";
 import Router from "../Router.js";
 
+//Instantiating them.
 const app = new App("app");
 const router = new Router(app);
 
+//Testing them
 app.addView({
     name: "models",
     model: {},
@@ -12,7 +15,7 @@ app.addView({
     },
     controller(model) {
         document.getElementById("test").onclick = () => {
-            router.get("#/gold");
+            router.get("#/home");
         }
     }
 });
@@ -25,10 +28,10 @@ app.addView({
     },
     controller(model) {
         document.getElementById("test").onclick = () => {
-            router.get("#/golden");
+            router.get("#/about");
         }
     }
 });
 
-router.addRoute("modelling", "#/gold")
-router.addRoute("models", "#/golden")
+router.addRoute("modelling", "#/about");
+router.addRoute("models", "#/home");
