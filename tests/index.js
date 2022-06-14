@@ -3,7 +3,7 @@ import Router from "../Router.js";
 import RouterConfig from "../RouterConfig.js";
 
 const app = new App("app");
-const router = new Router(app);
+// const router = new Router(app);
 
 app.addView({
     name: "models",

@@ -1,3 +1,4 @@
 {
-    "home": "#/home"
+    "name": ["models"],
+    "route": ["#/home"]
 }
