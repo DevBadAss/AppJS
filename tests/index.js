@@ -35,3 +35,7 @@ app.addView({
 
 router.addRoute("modelling", "#/about");
 router.addRoute("models", "#/home");
+
+
+// Importing DOM.js
+import DOM from "../lib/dom.js";
