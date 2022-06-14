@@ -1,6 +1,5 @@
 import App from "../App.js";
 import Router from "../Router.js";
-// import RouterConfig from "../RouterConfig.js";
 
 const app = new App("app");
 const router = new Router(app);
@@ -31,6 +30,5 @@ app.addView({
     }
 });
 
-// router.addRoute("modelling", "#/gold")
-// router.addRoute("models", "#/golden")
-router.config(app, "./route-config.json");
+router.addRoute("modelling", "#/gold")
+router.addRoute("models", "#/golden")
