@@ -1,7 +1,3 @@
-import Request from "./mvc-request/request.js";
-import Loop from "./lib/Loop.js";
-
-
 /**
  * @class Router A mini SPA router module for hash urls.
  * @author Olawoore Emmanuel Collins
