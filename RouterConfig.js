@@ -12,3 +12,5 @@ function RouterConfig(app, configFile) {
         });
     });
 }
+
+export default RouterConfig;
