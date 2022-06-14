@@ -46,4 +46,3 @@ console.log(bodyDom.select("first-text"));
 console.log(bodyDom.getTag("DIV"));
 console.log(bodyDom.getID("second-text"));
 console.log(bodyDom.getClass("first-text"));
-console.log(bodyDom.getDomData(["first-text", "second-text", "parent-div", "sub-div"]));
