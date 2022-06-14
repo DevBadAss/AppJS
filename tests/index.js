@@ -40,7 +40,10 @@ router.addRoute("models", "#/home");
 // Importing DOM.js
 import DOM from "../lib/dom.js";
 
+//Instantiating
 const bodyDom = new DOM("app");
+
+//Testing
 console.log(bodyDom.selectall("first-text"));
 console.log(bodyDom.select("first-text"));
 console.log(bodyDom.getTag("DIV"));
