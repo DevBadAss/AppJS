@@ -1,9 +1,9 @@
 /**
- * LightWeight MVC Framework
+ * LightWeight SPA Framework
  * @author Olawoore Emmanuel Collins
  */
 
-class MVC {
+class App {
     /**
      * @param {String} app name of app renderer.
      */
@@ -59,4 +59,4 @@ class MVC {
     }
 }
 
-export default MVC;
+export default App;
