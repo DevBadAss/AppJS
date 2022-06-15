@@ -14,9 +14,10 @@ app.addView({
         return "<span id='test'> you are dope</span>";
     },
     controller(model) {
-        document.getElementById("test").onclick = () => {
-            router.get("/home");
-        }
+        if (document.getElementById("test"))
+            document.getElementById("test").onclick = () => {
+                router.get("/about");
+            }
     }
 });
 
@@ -27,9 +28,10 @@ app.addView({
         return "<span id='test'> good</span>";
     },
     controller(model) {
-        document.getElementById("test").onclick = () => {
-            router.get("/about");
-        }
+        if (document.getElementById("test"))
+            document.getElementById("test").onclick = () => {
+                router.get("/home");
+            }
     }
 });
 
