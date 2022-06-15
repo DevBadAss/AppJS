@@ -7,19 +7,11 @@ const app = new App("app");
 const router = new Router(app);
 
 //Testing them
-
-function change() {
-    document.body.innerHTML = "<span id='test'>Good</span>"
-    document.getElementById("test").onclick = () => {
-        router.get("#/about");
-    }
-}
-
 app.addView({
     name: "models",
     model: {},
     view(model) {
-        change()
+        return "<span id='test'> Now</span>";
     },
     controller(model) {
 

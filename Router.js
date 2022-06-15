@@ -23,9 +23,9 @@ class Router {
     addRoute(view, url) {
         this.ROUTES.push({ view, url });
         this.hashChange();
-        // window.onpopstate = () => {
-        //     window.location.reload();
-        // }
+        window.onpopstate = () => {
+            window.location.reload();
+        }
         return false;
     }
 
