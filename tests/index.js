@@ -15,7 +15,7 @@ app.addView({
     },
     controller(model) {
         document.getElementById("test").onclick = () => {
-            router.get("#/home");
+            router.get("/home");
         }
     }
 });
@@ -28,7 +28,7 @@ app.addView({
     },
     controller(model) {
         document.getElementById("test").onclick = () => {
-            router.get("#/about");
+            router.get("/about");
         }
     }
 });
