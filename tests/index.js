@@ -7,17 +7,23 @@ const app = new App("app");
 const router = new Router(app);
 
 //Testing them
+
+function change() {
+    if (document.getElementById("test"))
+        document.getElementById("test").onclick = () => {
+            router.get("/about");
+        }
+}
+
 app.addView({
     name: "models",
     model: {},
     view(model) {
+        change()
         return "<span id='test'> you are dope</span>";
     },
     controller(model) {
-        if (document.getElementById("test"))
-            document.getElementById("test").onclick = () => {
-                router.get("/about");
-            }
+
     }
 });
 
@@ -28,10 +34,7 @@ app.addView({
         return "<span id='test'> good</span>";
     },
     controller(model) {
-        if (document.getElementById("test"))
-            document.getElementById("test").onclick = () => {
-                router.get("/home");
-            }
+
     }
 });
 
