@@ -9,10 +9,10 @@ const router = new Router(app);
 //Testing them
 
 function change() {
-    if (document.getElementById("test"))
-        document.getElementById("test").onclick = () => {
-            router.get("/about");
-        }
+    document.body.innerHTML = "<span id='test'>Good</span>"
+    document.getElementById("test").onclick = () => {
+        router.get("/about");
+    }
 }
 
 app.addView({
@@ -20,7 +20,6 @@ app.addView({
     model: {},
     view(model) {
         change()
-        return "<span id='test'> you are dope</span>";
     },
     controller(model) {
 
