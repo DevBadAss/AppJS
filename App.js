@@ -27,10 +27,6 @@ class App {
 
     RenderView(name) {
         this.currentView = this.ViewRegistry[name];
-        console.log(this.currentView);
-        if (this.currentView === null) {
-            window.location.hash = "#/404";
-        }
         this.updateView();
         if (this.currentView) {
             this.currentView.controller(this.currentView.model);
