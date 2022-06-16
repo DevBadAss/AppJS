@@ -27,6 +27,9 @@ class App {
 
     RenderView(name) {
         this.currentView = this.ViewRegistry[name];
+        if (this.currentView === null) {
+            window.location.hash = "#/404";
+        }
         this.updateView();
         if (this.currentView) {
             this.currentView.controller(this.currentView.model);
@@ -41,9 +44,6 @@ class App {
     updateView() {
         if (this.currentView) {
             this.app.innerHTML = this.currentView.view(this.currentView.model);
-        }
-        if (this.currentView === null) {
-            window.location.hash = "#/404";
         }
     }
 
