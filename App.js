@@ -42,7 +42,7 @@ class App {
         if (this.currentView) {
             this.app.innerHTML = this.currentView.view(this.currentView.model);
         }
-        if (this.app.innerHTML === "") {
+        if (this.currentView === null) {
             window.location.hash = "#/404";
         }
     }
