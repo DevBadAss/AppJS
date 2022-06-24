@@ -49,7 +49,7 @@ class LeftTab extends HTMLElement {
 }
 
 
-class RightTab {
+class RightTab extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
