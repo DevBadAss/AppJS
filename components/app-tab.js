@@ -33,11 +33,11 @@ class LeftTab extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector(".left-tab").style.backgroundColor = this.getAttribute("background");
         this.shadowRoot.querySelector(".left-tab").style.width = this.getAttribute("width");
+        this.shadowRoot.querySelector(".left-tab").style = this.style;
     }
 
     connectedCallback() {
         this.shadowRoot.querySelector(".left-html").innerHTML = this.innerHTML;
-        this.shadowRoot.querySelector(".left-tab").style = this.style;
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".left-tab").classList.add("slide-right");
