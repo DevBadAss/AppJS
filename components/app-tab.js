@@ -20,19 +20,18 @@ class LeftTab extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        this.shadowRoot.querySelector("left-tab").style.backgroundColor = this.getAttribute("background");
-        this.shadowRoot.querySelector("left-tab").style.width = this.getAttribute("width");
+        this.shadowRoot.querySelector(".left-tab").style.backgroundColor = this.getAttribute("background");
+        this.shadowRoot.querySelector(".left-tab").style.width = this.getAttribute("width");
     }
 
     connectedCallback() {
-        // this.innerHTML = this.shadowRoot.querySelector("html").innerHTML;
-        console.log(this.innerHTML);
+        this.shadowRoot.querySelector(".html").innerHTML = this.innerHTML;
         switch (this.getAttribute("animate")) {
             case true:
-                this.shadowRoot.querySelector("left-tab").classList.add("tab-animate-left");
+                this.shadowRoot.querySelector(".left-tab").classList.add("tab-animate-left");
                 break;
             case false:
-                this.shadowRoot.querySelector("left-tab").className = "left-tab";
+                this.shadowRoot.querySelector(".left-tab").className = "left-tab";
                 break;
         }
     }
