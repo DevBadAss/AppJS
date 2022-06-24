@@ -15,7 +15,7 @@ class LeftTab extends HTMLElement {
         this.shadowRoot.appendChild(Lefttemplate.content.cloneNode(true));
     }
 
-    static get observeAttributes() {
+    static get observedAttributes() {
         return ["background", "width", "animate"];
     }
 
