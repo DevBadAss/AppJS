@@ -46,6 +46,11 @@ class LeftTab extends HTMLElement {
                 break;
         }
     }
+
+    disconnectedCallback() {
+        this.shadowRoot.querySelector(".left-html").innerHTML = "";
+        this.shadowRoot.querySelector(".left-tab").classList.toggle("slide-out-left");
+    }
 }
 
 
@@ -75,6 +80,11 @@ class RightTab extends HTMLElement {
                 this.shadowRoot.querySelector(".right-tab").className = "right-tab";
                 break;
         }
+    }
+
+    disconnectedCallback() {
+        this.shadowRoot.querySelector(".right-html").innerHTML = "";
+        this.shadowRoot.querySelector(".right-tab").classList.toggle("slide-out-right");
     }
 }
 
