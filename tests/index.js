@@ -90,3 +90,9 @@ import { LeftTab, RightTab } from "../components/app-tab.js";
 
 Create__Component("left-tab", LeftTab);
 Create__Component("right-tab", RightTab);
+
+
+setTimeout(() => {
+    document.getElementsByTagName("right-tab").remove()
+    document.getElementsByTagName("right-tab").remove()
+}, 5000);
