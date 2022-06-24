@@ -12,7 +12,9 @@
     top: 0;
     right: 0;
     bottom: 0;
-}.slide-right {
+}
+
+.slide-right {
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
     -webkit-animation-duration: 1s;
