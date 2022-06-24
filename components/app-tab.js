@@ -2,6 +2,7 @@ const Lefttemplate = document.createElement("template");
 
 Lefttemplate.innerHTML = `
     <link rel="stylesheet" href="../components/components-css/app-tab.css">
+    <link rel="stylesheet" href="../components/components-css/components.css">
     <div class="left-tab">
         <div class="left-html">
         </div>
@@ -13,7 +14,9 @@ const Righttemplate = document.createElement("template");
 
 Righttemplate.innerHTML = `
     <link rel="stylesheet" href="../components/components-css/app-tab.css">
+    <link rel="stylesheet" href="../components/components-css/components.css">
     <div class="right-tab">
+        <slot name="animation"></slot>
         <div class="right-html">
         </div>
     </div>
