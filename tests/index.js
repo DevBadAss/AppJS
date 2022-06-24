@@ -86,6 +86,7 @@ import startRecord from "../lib/screen-recorder.js";
 
 //Importing components
 import Create__Component from "../lib/component.js";
-import { LeftTab } from "../components/app-tab.js";
+import { LeftTab, RightTab } from "../components/app-tab.js";
 
 Create__Component("left-tab", LeftTab);
+Create__Component("right-tab", RightTab);
