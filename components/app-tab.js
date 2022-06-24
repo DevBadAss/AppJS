@@ -69,7 +69,7 @@ class RightTab extends HTMLElement {
         this.shadowRoot.querySelector(".right-html").innerHTML = this.innerHTML;
         switch (this.getAttribute("animate")) {
             case "true":
-                this.shadowRoot.querySelector(".right-tab").classList.add("slide-right");
+                this.shadowRoot.querySelector(".right-tab").classList.add("slide-left");
                 break;
             case "false":
                 this.shadowRoot.querySelector(".right-tab").className = "right-tab";
