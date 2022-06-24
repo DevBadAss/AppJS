@@ -93,6 +93,6 @@ Create__Component("right-tab", RightTab);
 
 
 setTimeout(() => {
-    document.getElementsByTagName("right-tab").remove()
-    document.getElementsByTagName("right-tab").remove()
+    document.body.removeChild(document.querySelector(".left-tab"));
+    document.body.removeChild(document.querySelector(".right-tab"));
 }, 5000);
