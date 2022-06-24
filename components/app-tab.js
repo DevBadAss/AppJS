@@ -1,7 +1,7 @@
 const Lefttemplate = document.createElement("template");
 
 Lefttemplate.innerHTML = `
-    <link rel="stylesheet" href="./components-css/app-tab.css">
+    <link rel="stylesheet" href="../components/components-css/app-tab.css">
     <div class="left-tab">
         <div class="html">
         </div>
