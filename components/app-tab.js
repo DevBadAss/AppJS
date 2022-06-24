@@ -37,6 +37,7 @@ class LeftTab extends HTMLElement {
 
     connectedCallback() {
         this.shadowRoot.querySelector(".left-html").innerHTML = this.innerHTML;
+        this.shadowRoot.querySelector(".left-html").style = this.style;
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".left-tab").classList.add("slide-right");
@@ -72,6 +73,7 @@ class RightTab extends HTMLElement {
 
     connectedCallback() {
         this.shadowRoot.querySelector(".right-html").innerHTML = this.innerHTML;
+        this.shadowRoot.querySelector(".right-html").style = this.style;
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".right-tab").classList.add("slide-left");
