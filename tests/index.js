@@ -94,5 +94,6 @@ Create__Component("right-tab", RightTab);
 
 setTimeout(() => {
     bodyDom.Attr("set", { name: "disconnect", value: "true" }, "LeftTab");
+    bodyDom.Attr("set", { name: "disconnect", value: "true" }, "RightTab");
 
 }, 5000);
