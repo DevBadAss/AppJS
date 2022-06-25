@@ -36,9 +36,15 @@ class LeftTab extends HTMLElement {
         switch (this.getAttribute("disconnect")) {
             case "true":
                 this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-left");
+                setTimeout(() => {
+                    this.remove();
+                }, 1200);
                 break;
             case "false":
                 this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-left");
+                setTimeout(() => {
+                    this.remove();
+                }, 1200);
                 break;
         }
     }
@@ -80,9 +86,15 @@ class RightTab extends HTMLElement {
         switch (this.getAttribute("disconnect")) {
             case "true":
                 this.shadowRoot.querySelector(".right-tab").classList.add("slide-out-right");
+                setTimeout(() => {
+                    this.remove();
+                }, 1200);
                 break;
             case "false":
                 this.shadowRoot.querySelector(".right-tab").classList.add("slide-out-right");
+                setTimeout(() => {
+                    this.remove();
+                }, 1200);
                 break;
         }
     }
