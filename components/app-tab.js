@@ -35,10 +35,10 @@ class LeftTab extends HTMLElement {
         this.shadowRoot.querySelector(".left-tab").style.width = this.getAttribute("width");
         switch (this.getAttribute("disconnect")) {
             case "true":
-                this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-right");
+                this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-left");
                 break;
             case "false":
-                this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-right");
+                this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-left");
                 break;
         }
     }
@@ -102,7 +102,6 @@ class RightTab extends HTMLElement {
 
     disconnectedCallback() {
         this.shadowRoot.querySelector(".right-html").innerHTML = "";
-        this.shadowRoot.querySelector(".right-tab").classList.toggle("slide-out-right");
     }
 }
 
