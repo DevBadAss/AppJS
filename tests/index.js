@@ -38,7 +38,7 @@ router.addRoute("models", "#/home");
 import DOM from "../lib/dom.js";
 
 //Instantiating
-// const bodyDom = new DOM("app");
+const bodyDom = new DOM("app");
 
 //Testing
 // console.log(bodyDom.selectall("first-text"));
@@ -90,3 +90,9 @@ import { LeftTab, RightTab } from "../components/app-tab.js";
 
 Create__Component("left-tab", LeftTab);
 Create__Component("right-tab", RightTab);
+
+
+setTimeout(() => {
+    bodyDom.Attr("set", { name: "disconnect", value: "true" }, "LeftTab");
+
+}, 5000);

@@ -27,16 +27,25 @@ class LeftTab extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["background", "width", "animate"];
+        return ["background", "width", "animate", "disconnect"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector(".left-tab").style.backgroundColor = this.getAttribute("background");
         this.shadowRoot.querySelector(".left-tab").style.width = this.getAttribute("width");
+        switch (this.getAttribute("disconnect")) {
+            case "true":
+                this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-right");
+                break;
+            case "false":
+                this.shadowRoot.querySelector(".left-tab").classList.add("slide-out-right");
+                break;
+        }
     }
 
     connectedCallback() {
         this.shadowRoot.querySelector(".left-html").innerHTML = this.innerHTML;
+        this.setAttribute("class", "LeftTab");
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".left-tab").classList.add("slide-right");
@@ -62,16 +71,25 @@ class RightTab extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["background", "width", "animate"];
+        return ["background", "width", "animate", "disconnect"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector(".right-tab").style.backgroundColor = this.getAttribute("background");
         this.shadowRoot.querySelector(".right-tab").style.width = this.getAttribute("width");
+        switch (this.getAttribute("disconnect")) {
+            case "true":
+                this.shadowRoot.querySelector(".right-tab").classList.add("slide-out-right");
+                break;
+            case "false":
+                this.shadowRoot.querySelector(".right-tab").classList.add("slide-out-right");
+                break;
+        }
     }
 
     connectedCallback() {
         this.shadowRoot.querySelector(".right-html").innerHTML = this.innerHTML;
+        this.setAttribute("class", "RightTab");
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".right-tab").classList.add("slide-left");
