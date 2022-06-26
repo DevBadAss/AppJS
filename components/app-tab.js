@@ -46,6 +46,7 @@ class LeftTab extends HTMLElement {
 
     connectedCallback() {
         this.shadowRoot.querySelector(".left-html").innerHTML = this.innerHTML;
+        console.log(this.shadowRoot.innerHTML)
         this.setAttribute("class", "LeftTab");
         this.setAttribute("data-style-path", "/AppJS/");
         switch (this.getAttribute("animate")) {
