@@ -1,8 +1,4 @@
 const Lefttemplate = document.createElement("template");
-
-
-
-
 const Righttemplate = document.createElement("template");
 
 
@@ -11,13 +7,13 @@ class LeftTab extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        //         Lefttemplate.innerHTML = `
-        //     <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
-        //     <div class="left-tab">
-        //         <div class="left-html">
-        //         </div>
-        //     </div>
-        // `;
+        Lefttemplate.innerHTML = `
+            <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+            <div class="left-tab">
+                <div class="left-html">
+                </div>
+            </div>
+        `;
         this.shadowRoot.appendChild(Lefttemplate.content.cloneNode(true));
     }
 
@@ -75,13 +71,13 @@ class RightTab extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        //         Righttemplate.innerHTML = `
-        //     <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
-        //     <div class="right-tab">
-        //         <div class="right-html">
-        //         </div>
-        //     </div>
-        // `;
+        Righttemplate.innerHTML = `
+            <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+            <div class="right-tab">
+                <div class="right-html">
+                </div>
+            </div>
+        `;
         this.shadowRoot.appendChild(Righttemplate.content.cloneNode(true));
     }
 
