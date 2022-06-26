@@ -1,7 +1,7 @@
 const Lefttemplate = document.createElement("template");
 
 Lefttemplate.innerHTML = `
-    <link rel="stylesheet" href="../components/components-css/app-tab.css">
+    <link rel="stylesheet" href="/AppJS/components/components-css/app-tab.css">
     <div class="left-tab">
         <div class="left-html">
         </div>
@@ -12,7 +12,7 @@ Lefttemplate.innerHTML = `
 const Righttemplate = document.createElement("template");
 
 Righttemplate.innerHTML = `
-    <link rel="stylesheet" href="../components/components-css/app-tab.css">
+    <link rel="stylesheet" href="/AppJS/components/components-css/app-tab.css">
     <div class="right-tab">
         <div class="right-html">
         </div>
