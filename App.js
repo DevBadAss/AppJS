@@ -58,6 +58,9 @@ class App {
         });
     }
 
+    /**
+     * Reloads App
+     */
     refresh() {
         window.location.reload();
     }
