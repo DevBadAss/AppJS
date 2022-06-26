@@ -8,7 +8,7 @@ class LeftTab extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         Lefttemplate.innerHTML = `
-            <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+            <link rel="stylesheet" href="/components/components-css/app-tab.css">
             <div class="left-tab">
                 <div class="left-html">
                 </div>
@@ -72,7 +72,7 @@ class RightTab extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         Righttemplate.innerHTML = `
-            <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+            <link rel="stylesheet" href="/components/components-css/app-tab.css">
             <div class="right-tab">
                 <div class="right-html">
                 </div>
