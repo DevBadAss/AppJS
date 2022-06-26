@@ -57,6 +57,10 @@ class App {
             }
         });
     }
+
+    refresh() {
+        window.location.reload();
+    }
 }
 
 export default App;
