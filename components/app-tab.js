@@ -11,13 +11,13 @@ class LeftTab extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        Lefttemplate.innerHTML = `
-    <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
-    <div class="left-tab">
-        <div class="left-html">
-        </div>
-    </div>
-`;
+        //         Lefttemplate.innerHTML = `
+        //     <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+        //     <div class="left-tab">
+        //         <div class="left-html">
+        //         </div>
+        //     </div>
+        // `;
         this.shadowRoot.appendChild(Lefttemplate.content.cloneNode(true));
     }
 
@@ -45,10 +45,15 @@ class LeftTab extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadowRoot.querySelector(".left-html").innerHTML = this.innerHTML;
-        console.log(this.shadowRoot.innerHTML)
         this.setAttribute("class", "LeftTab");
         this.setAttribute("data-style-path", "/AppJS/");
+        this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+        <div class="left-tab">
+            <div class="left-html">
+            </div>
+        </div>`
+        this.shadowRoot.querySelector(".left-html").innerHTML = this.innerHTML;
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".left-tab").classList.add("slide-right");
@@ -70,13 +75,13 @@ class RightTab extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        Righttemplate.innerHTML = `
-    <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
-    <div class="right-tab">
-        <div class="right-html">
-        </div>
-    </div>
-`;
+        //         Righttemplate.innerHTML = `
+        //     <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+        //     <div class="right-tab">
+        //         <div class="right-html">
+        //         </div>
+        //     </div>
+        // `;
         this.shadowRoot.appendChild(Righttemplate.content.cloneNode(true));
     }
 
@@ -104,9 +109,16 @@ class RightTab extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadowRoot.querySelector(".right-html").innerHTML = this.innerHTML;
         this.setAttribute("class", "RightTab");
         this.setAttribute("data-style-path", "/AppJS/");
+        this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="${this.getAttribute("data-style-path")}components/components-css/app-tab.css">
+            <div class="right-tab">
+                <div class="right-html">
+                </div>
+            </div>
+        `;
+        this.shadowRoot.querySelector(".right-html").innerHTML = this.innerHTML;
         switch (this.getAttribute("animate")) {
             case "true":
                 this.shadowRoot.querySelector(".right-tab").classList.add("slide-left");
