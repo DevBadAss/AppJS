@@ -22,7 +22,7 @@ class LeftTab extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["background", "width", "animate", "disconnect"];
+        return ["background", "width", "animate", "data-style-path", "disconnect"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
